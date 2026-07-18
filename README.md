@@ -77,18 +77,23 @@ Images live in **`public/images/`**:
 
 ```
 public/images/
-  hero.jpg              ← homepage hero background
-  about.jpg             ← the "who we are" photo
+  hero.webp             ← homepage hero background
+  about.webp            ← the "who we are" photo
   services/             ← one image per service (matches the "image" path)
   projects/             ← one image per project (matches the "image" path)
 ```
 
-**To replace a placeholder with your own photo:** drop your file into the right
-folder and point the JSON `image` field at it, e.g. `"/images/projects/my-hotel.jpg"`.
-Easiest is to **keep the same filename** — then you don't even touch the JSON.
+Images are served directly (not auto-optimized), so **they must be compressed**.
+There's a one-command optimizer for this:
 
-> The current images are royalty-free placeholders. Replace them with real project
-> photos whenever ready. Recommended size ~1400px wide, JPG, under ~400 KB.
+1. Drop your original photos (JPG/PNG, any size) into the right folder under `public/images`.
+2. Run **`npm run optimize:images`** — each is resized and converted to compact WebP
+   (the original JPG/PNG is removed).
+3. Point the matching `image` field in `src/content/*.json` at the new `.webp` file.
+
+> ⚠️ Don't commit large raw phone photos directly — a big uncompressed image will
+> make the page load slowly. Always run `npm run optimize:images` first.
+> The current images are royalty-free placeholders; replace them with real project photos.
 
 ---
 
