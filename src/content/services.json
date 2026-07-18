@@ -1,0 +1,107 @@
+[
+  {
+    "id": "interior",
+    "title": "Interior Fit-Outs",
+    "tagline": "Turnkey interiors, built to brand standard",
+    "description": "Complete interior fit-outs for guest rooms, lobbies, F&B and back-of-house — delivered to operator specifications, on schedule, and with minimal disruption to live operations.",
+    "icon": "Sofa",
+    "image": "/images/services/interior.jpg",
+    "highlights": [
+      "Guest rooms, suites & corridors",
+      "Lobbies, F&B and banquet spaces",
+      "Bespoke joinery & millwork",
+      "Brand-standard PIP renovations"
+    ],
+    "featured": true
+  },
+  {
+    "id": "waterproofing",
+    "title": "Waterproofing",
+    "tagline": "Watertight systems, warranty-backed",
+    "description": "Membrane and coating systems for terraces, bathrooms, basements, podiums and swimming pools — engineered to withstand heavy footfall and constant wet exposure.",
+    "icon": "Droplets",
+    "image": "/images/services/waterproofing.jpg",
+    "highlights": [
+      "Terrace & podium waterproofing",
+      "Wet areas & bathrooms",
+      "Swimming pools & water features",
+      "Basements & retaining structures"
+    ],
+    "featured": true
+  },
+  {
+    "id": "painting",
+    "title": "Painting & Finishes",
+    "tagline": "Flawless surfaces, inside and out",
+    "description": "Decorative and protective painting — from premium interior emulsions and textures to exterior and industrial coatings — applied to a hospitality-grade finish.",
+    "icon": "PaintRoller",
+    "image": "/images/services/painting.jpg",
+    "highlights": [
+      "Interior emulsions & textures",
+      "Exterior & weatherproof coatings",
+      "Wood & metal finishing",
+      "Specialist decorative finishes"
+    ],
+    "featured": true
+  },
+  {
+    "id": "polishing",
+    "title": "Surface Polishing",
+    "tagline": "Mirror finishes for stone, floors & decks",
+    "description": "Diamond polishing and restoration for marble, granite and concrete — plus deck and poolside surfaces — restoring shine, gloss and slip-safe texture.",
+    "icon": "Sparkles",
+    "image": "/images/services/polishing.jpg",
+    "highlights": [
+      "Marble & granite polishing",
+      "Concrete grinding & sealing",
+      "Pool deck & outdoor surfaces",
+      "Restoration & maintenance"
+    ],
+    "featured": true
+  },
+  {
+    "id": "flooring",
+    "title": "Flooring",
+    "tagline": "Carpet, vinyl & wooden flooring",
+    "description": "Supply and installation of premium floor coverings — broadloom and tiled carpet, luxury vinyl, engineered and solid wood — matched to traffic, acoustics and design intent.",
+    "icon": "LayoutGrid",
+    "image": "/images/services/flooring.jpg",
+    "highlights": [
+      "Broadloom & carpet tiles",
+      "Luxury vinyl (LVT / SPC)",
+      "Engineered & solid wood",
+      "Laminate & sports flooring"
+    ],
+    "featured": true
+  },
+  {
+    "id": "glass-films",
+    "title": "Glass Films",
+    "tagline": "Solar, safety & privacy films",
+    "description": "Architectural window films that cut heat and glare, add privacy and frosting, and improve safety — professionally applied to glazing, partitions and facades.",
+    "icon": "Layers",
+    "image": "/images/services/glass-films.jpg",
+    "highlights": [
+      "Solar & heat-control films",
+      "Frosted & privacy films",
+      "Safety & security films",
+      "Decorative & branded films"
+    ],
+    "featured": false
+  },
+  {
+    "id": "blinds",
+    "title": "Window Blinds",
+    "tagline": "Motorised & manual blinds",
+    "description": "Made-to-measure blinds and shades — roller, roman, venetian and motorised systems — for light control, privacy and a clean, contemporary look.",
+    "icon": "Blinds",
+    "image": "/images/services/blinds.jpg",
+    "highlights": [
+      "Roller & roman blinds",
+      "Venetian & vertical blinds",
+      "Motorised & automated systems",
+      "Blackout & sheer options"
+    ],
+    "featured": false
+  }
+]

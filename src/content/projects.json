@@ -1,0 +1,79 @@
+[
+  {
+    "id": "courtyard-marriott-bengaluru",
+    "name": "Courtyard by Marriott, Bengaluru",
+    "location": "Bengaluru",
+    "brand": "Marriott International",
+    "category": "Hospitality",
+    "scope": ["Interior Fit-Outs", "Waterproofing", "Flooring"],
+    "description": "Fit-out and finishing works across guest rooms and public areas at this Courtyard by Marriott property in Bengaluru.",
+    "image": "/images/projects/courtyard-marriott-bengaluru.jpg",
+    "featured": true
+  },
+  {
+    "id": "courtyard-marriott-hyderabad",
+    "name": "Courtyard by Marriott, Hyderabad",
+    "location": "Hyderabad",
+    "brand": "Marriott International",
+    "category": "Hospitality",
+    "scope": ["Interior Fit-Outs", "Painting & Finishes", "Surface Polishing"],
+    "description": "Interior finishing and surface works for the lakefront Courtyard by Marriott in central Hyderabad.",
+    "image": "/images/projects/courtyard-marriott-hyderabad.jpg",
+    "featured": true
+  },
+  {
+    "id": "hyatt-regency-pune",
+    "name": "Hyatt Regency Pune & Residences",
+    "location": "Pune",
+    "brand": "Hyatt Hotels",
+    "category": "Hospitality",
+    "scope": ["Interior Fit-Outs", "Flooring", "Window Blinds"],
+    "description": "Guest-room and residence finishing at Hyatt Regency Pune, on Nagar Road, Kalyani Nagar.",
+    "image": "/images/projects/hyatt-regency-pune.jpg",
+    "featured": true
+  },
+  {
+    "id": "hyatt-place-gurgaon",
+    "name": "Hyatt Place Gurgaon / Udyog Vihar",
+    "location": "Gurugram",
+    "brand": "Hyatt Hotels",
+    "category": "Hospitality",
+    "scope": ["Waterproofing", "Painting & Finishes"],
+    "description": "Waterproofing and painting works at Hyatt Place, Udyog Vihar, Gurugram.",
+    "image": "/images/projects/hyatt-place-gurgaon.jpg",
+    "featured": true
+  },
+  {
+    "id": "holiday-inn-greater-noida",
+    "name": "Holiday Inn Express, Greater Noida",
+    "location": "Greater Noida",
+    "brand": "IHG Hotels & Resorts",
+    "category": "Hospitality",
+    "scope": ["Interior Fit-Outs", "Flooring", "Glass Films"],
+    "description": "Interior fit-out and flooring at Holiday Inn Express, Knowledge Park, Greater Noida.",
+    "image": "/images/projects/holiday-inn-greater-noida.jpg",
+    "featured": true
+  },
+  {
+    "id": "holiday-inn-pune",
+    "name": "Holiday Inn Express, Pune",
+    "location": "Pune",
+    "brand": "IHG Hotels & Resorts",
+    "category": "Hospitality",
+    "scope": ["Waterproofing", "Surface Polishing"],
+    "description": "Waterproofing and polishing works at Holiday Inn Express, Hinjewadi, Pune.",
+    "image": "/images/projects/holiday-inn-pune.jpg",
+    "featured": true
+  },
+  {
+    "id": "banjara-hills-hyderabad",
+    "name": "Luxury Hotel, Banjara Hills",
+    "location": "Hyderabad",
+    "brand": "Hospitality",
+    "category": "Hospitality",
+    "scope": ["Interior Fit-Outs", "Surface Polishing"],
+    "description": "Interior and finishing works for a premium hotel in Banjara Hills, Hyderabad.",
+    "image": "/images/projects/banjara-hills-hyderabad.jpg",
+    "featured": false
+  }
+]

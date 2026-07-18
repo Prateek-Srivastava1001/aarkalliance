@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Aark Alliance — design system                                      */
+/*  Premium, dependable, and futuristic. Deep neutrals + brass accent. */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  /* Core palette */
+  --color-ink: #08080a;
+  --color-ink-soft: #0d0d11;
+  --color-surface: #111116;
+  --color-surface-2: #16161d;
+  --color-line: #232329;
+
+  --color-bone: #f6f4ef;
+  --color-muted: #a5a49d;
+  --color-faint: #6f6e69;
+
+  /* Brass / champagne accent */
+  --color-brass: #c8a15a;
+  --color-brass-light: #e7cd93;
+  --color-brass-dark: #9c7838;
+
+  /* Fonts (wired up in layout.tsx via next/font) */
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  /* Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Animations */
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-aurora: aurora 18s ease-in-out infinite alternate;
+  --animate-float: float 8s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes aurora {
+  0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.55; }
+  100% { transform: translate3d(4%, -3%, 0) scale(1.15); opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv01";
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-brass);
+    color: var(--color-ink);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: var(--color-ink); }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a31;
+    border-radius: 999px;
+    border: 2px solid var(--color-ink);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-brass-dark); }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  /* Brass gradient text */
+  .text-gradient-brass {
+    background: linear-gradient(120deg, var(--color-brass-light), var(--color-brass) 45%, var(--color-brass-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Frosted glass surface */
+  .glass {
+    background: color-mix(in srgb, var(--color-surface) 70%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--color-line);
+  }
+
+  /* Subtle blueprint grid background */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Fade the grid toward the edges */
+  .mask-fade-y {
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+  }
+
+  .mask-fade-radial {
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 100%);
+  }
+
+  /* Thin hairline divider */
+  .hairline {
+    border-top: 1px solid var(--color-line);
+  }
+
+  /* Brass glow ring on hover */
+  .ring-brass {
+    box-shadow: 0 0 0 1px var(--color-brass-dark), 0 20px 60px -20px rgba(200, 161, 90, 0.35);
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
