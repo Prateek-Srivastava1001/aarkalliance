@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Mail, Phone, MapPin, MessageCircle, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Clock, Building2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { ContactForm } from "@/components/sections/ContactForm";
@@ -33,6 +33,11 @@ export default function ContactPage() {
       href: `https://wa.me/${site.contact.whatsapp}`,
     },
     {
+      icon: Building2,
+      label: "Office",
+      value: site.contact.address,
+    },
+    {
       icon: MapPin,
       label: "Service areas",
       value: site.contact.serviceAreas,
@@ -46,7 +51,7 @@ export default function ContactPage() {
         title={
           <>
             Let&apos;s finish your space{" "}
-            <span className="text-gradient-brass">beautifully</span>
+            <span className="text-gradient-brand">beautifully</span>
           </>
         }
         intro="Share your scope and timeline. We usually respond within one business day with next steps."
@@ -60,9 +65,9 @@ export default function ContactPage() {
               <div className="grid gap-4">
                 {details.map((d) => {
                   const content = (
-                    <div className="flex items-start gap-4 rounded-2xl border border-line bg-surface p-5 transition-colors hover:border-brass/40">
+                    <div className="flex items-start gap-4 rounded-2xl border border-line bg-surface p-5 transition-colors hover:border-brand/40">
                       <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-ink-soft">
-                        <d.icon className="h-5 w-5 text-brass" />
+                        <d.icon className="h-5 w-5 text-brand" />
                       </span>
                       <div>
                         <p className="text-xs uppercase tracking-[0.15em] text-faint">
@@ -89,17 +94,21 @@ export default function ContactPage() {
 
               <div className="mt-4 flex items-start gap-4 rounded-2xl border border-line bg-surface p-5">
                 <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-ink-soft">
-                  <Clock className="h-5 w-5 text-brass" />
+                  <Clock className="h-5 w-5 text-brand" />
                 </span>
                 <div>
                   <p className="text-xs uppercase tracking-[0.15em] text-faint">
                     Hours
                   </p>
                   <p className="mt-1 text-sm text-bone">
-                    Mon – Sat, 9:30am – 6:30pm IST
+                    Mon to Sat, 9:30am to 6:30pm IST
                   </p>
                 </div>
               </div>
+
+              <p className="mt-6 text-xs leading-relaxed text-faint">
+                GSTIN {site.contact.gstin} &nbsp;·&nbsp; PAN {site.contact.pan}
+              </p>
             </div>
 
             {/* Form */}

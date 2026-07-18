@@ -13,10 +13,10 @@ export function Services() {
             eyebrow="What we do"
             title={
               <>
-                One partner for every <span className="text-gradient-brass">finish</span>
+                One partner for every <span className="text-gradient-brand">finish</span>
               </>
             }
-            intro="From bare shell to snag-free handover — a single, accountable team across seven specialist trades, so nothing falls between the gaps."
+            intro="From bare shell to snag-free handover: a single accountable team across seven specialist trades, so nothing falls between the gaps."
           />
         </div>
 

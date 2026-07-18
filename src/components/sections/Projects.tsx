@@ -17,14 +17,14 @@ export function Projects() {
               <>
                 Delivered for the names
                 <br className="hidden sm:block" /> that set the{" "}
-                <span className="text-gradient-brass">standard</span>
+                <span className="text-gradient-brand">standard</span>
               </>
             }
           />
           <Reveal delay={0.1}>
             <Link
               href="/projects"
-              className="group inline-flex items-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-medium text-bone transition-colors hover:border-brass/50 hover:text-brass"
+              className="group inline-flex items-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-medium text-bone transition-colors hover:border-brand/50 hover:text-brand"
             >
               All projects
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

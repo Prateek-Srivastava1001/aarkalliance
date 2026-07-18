@@ -4,15 +4,15 @@ import { cn } from "@/lib/utils";
 type Variant = "primary" | "secondary" | "ghost";
 
 const base =
-  "group inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brass/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ink disabled:opacity-50";
+  "group inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ink disabled:opacity-50";
 
 const sizes = "px-6 py-3";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brass text-ink hover:bg-brass-light hover:shadow-[0_16px_40px_-12px_rgba(200,161,90,0.6)]",
+    "bg-brand text-white hover:bg-brand-dark hover:shadow-[0_16px_40px_-12px_rgba(124,58,237,0.6)]",
   secondary:
-    "glass text-bone hover:border-brass/50 hover:text-brass-light",
+    "glass text-bone hover:border-brand/50 hover:text-brand-light",
   ghost: "text-muted hover:text-bone",
 };
 

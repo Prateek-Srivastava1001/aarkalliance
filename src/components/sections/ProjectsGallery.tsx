@@ -32,8 +32,8 @@ export function ProjectsGallery({ projects }: { projects: Project[] }) {
               className={cn(
                 "rounded-full border px-4 py-2 text-sm transition-colors",
                 active === brand
-                  ? "border-brass bg-brass text-ink"
-                  : "border-line text-muted hover:border-brass/50 hover:text-bone"
+                  ? "border-brand bg-brand text-white"
+                  : "border-line text-muted hover:border-brand/50 hover:text-bone"
               )}
             >
               {brand}

@@ -6,7 +6,7 @@ import { Mail, MessageCircle } from "lucide-react";
 import { site, services } from "@/lib/content";
 
 const inputClass =
-  "w-full rounded-xl border border-line bg-ink-soft px-4 py-3 text-sm text-bone placeholder:text-faint transition-colors focus:border-brass/60 focus:outline-none focus:ring-1 focus:ring-brass/50";
+  "w-full rounded-xl border border-line bg-ink-soft px-4 py-3 text-sm text-bone placeholder:text-faint transition-colors focus:border-brand/60 focus:outline-none focus:ring-1 focus:ring-brand/50";
 
 export function ContactForm() {
   const params = useSearchParams();
@@ -48,7 +48,7 @@ export function ContactForm() {
 
   const handleEmail = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = `Project enquiry${serviceLabel ? ` — ${serviceLabel}` : ""}`;
+    const subject = `Project enquiry${serviceLabel ? `: ${serviceLabel}` : ""}`;
     const href = `mailto:${site.contact.email}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(buildMessage())}`;
@@ -67,7 +67,7 @@ export function ContactForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="mb-1.5 block text-xs font-medium text-muted">
-            Name<span className="text-brass"> *</span>
+            Name<span className="text-brand"> *</span>
           </label>
           <input
             required
@@ -90,7 +90,7 @@ export function ContactForm() {
         </div>
         <div>
           <label className="mb-1.5 block text-xs font-medium text-muted">
-            Email<span className="text-brass"> *</span>
+            Email<span className="text-brand"> *</span>
           </label>
           <input
             required
@@ -132,7 +132,7 @@ export function ContactForm() {
 
       <div className="mt-4">
         <label className="mb-1.5 block text-xs font-medium text-muted">
-          Project details<span className="text-brass"> *</span>
+          Project details<span className="text-brand"> *</span>
         </label>
         <textarea
           required
@@ -147,7 +147,7 @@ export function ContactForm() {
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
         <button
           type="submit"
-          className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-brass px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-brass-light"
+          className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-brand-dark"
         >
           <Mail className="h-4 w-4" />
           Send enquiry
@@ -155,7 +155,7 @@ export function ContactForm() {
         <button
           type="button"
           onClick={handleWhatsApp}
-          className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-line bg-surface px-6 py-3.5 text-sm font-medium text-bone transition-colors hover:border-brass/50 hover:text-brass"
+          className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-line bg-surface px-6 py-3.5 text-sm font-medium text-bone transition-colors hover:border-brand/50 hover:text-brand"
         >
           <MessageCircle className="h-4 w-4" />
           WhatsApp us

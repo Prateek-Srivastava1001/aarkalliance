@@ -17,18 +17,18 @@ export function Process() {
           title={
             <>
               A process that respects your{" "}
-              <span className="text-gradient-brass">operations</span>
+              <span className="text-gradient-brand">operations</span>
             </>
           }
-          intro="Clear stages, transparent pricing, and disciplined execution — engineered to minimise downtime and surprises."
+          intro="Clear stages, transparent pricing, and disciplined execution, engineered to minimise downtime and surprises."
         />
 
         <ol className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {process.map((step, i) => (
             <Reveal key={step.title} delay={i * 0.1} as="li">
-              <div className="group relative h-full rounded-2xl border border-line bg-surface p-7 transition-colors hover:border-brass/40">
+              <div className="group relative h-full rounded-2xl border border-line bg-surface p-7 transition-colors hover:border-brand/40">
                 <div className="flex items-center gap-3">
-                  <span className="font-display text-4xl font-semibold text-brass/30 transition-colors group-hover:text-brass/70">
+                  <span className="font-display text-4xl font-semibold text-brand/30 transition-colors group-hover:text-brand/70">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="h-px flex-1 bg-line" />

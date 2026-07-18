@@ -19,10 +19,10 @@ export default function ProjectsPage() {
         title={
           <>
             Finishes delivered across{" "}
-            <span className="text-gradient-brass">India&apos;s hotels</span>
+            <span className="text-gradient-brand">India&apos;s hotels</span>
           </>
         }
-        intro="A selection of properties we've helped build, renovate and rebrand — for the operators guests trust most."
+        intro="A selection of properties we've helped build, renovate and rebrand for the operators guests trust most."
       />
 
       <section className="pb-8">

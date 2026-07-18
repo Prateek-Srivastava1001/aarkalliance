@@ -16,7 +16,7 @@ export function Clients() {
               <span className="font-display text-sm font-medium tracking-wide text-bone/60">
                 {item}
               </span>
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brass/50" />
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand/50" />
             </span>
           ))}
         </div>

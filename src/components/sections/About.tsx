@@ -9,7 +9,7 @@ const differentiators = [
   {
     icon: Layers,
     title: "Seven trades, one contract",
-    body: "Interiors to blinds under a single accountable team — no coordination gaps between vendors.",
+    body: "Interiors to blinds under a single accountable team, with no coordination gaps between vendors.",
   },
   {
     icon: Hotel,
@@ -48,7 +48,7 @@ export function About() {
               </div>
               {/* Floating badge */}
               <div className="glass absolute -bottom-6 -right-2 rounded-2xl p-5 sm:right-6">
-                <p className="text-3xl font-semibold text-gradient-brass">Pan-India</p>
+                <p className="text-3xl font-semibold text-gradient-brand">Pan-India</p>
                 <p className="mt-1 text-xs text-muted">Hospitality &amp; commercial delivery</p>
               </div>
             </div>
@@ -61,10 +61,10 @@ export function About() {
               title={
                 <>
                   A finishing partner built for{" "}
-                  <span className="text-gradient-brass">hospitality</span>
+                  <span className="text-gradient-brand">hospitality</span>
                 </>
               }
-              intro="Aark Alliance brings interiors, waterproofing, painting, polishing, flooring, glass films and blinds together under one roof. We work the way hotels need us to — precise, discreet, and dependable — so operators get a finish worthy of their brand, on the date they promised their guests."
+              intro="Aark Alliance brings interiors, waterproofing, painting, polishing, flooring, glass films and blinds together under one roof. We work the way hotels need us to: precise, discreet, and dependable, so operators get a finish worthy of their brand, on the date they promised their guests."
             />
 
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -72,7 +72,7 @@ export function About() {
                 <Reveal key={d.title} delay={i * 0.08}>
                   <div className="flex gap-4">
                     <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-surface">
-                      <d.icon className="h-5 w-5 text-brass" />
+                      <d.icon className="h-5 w-5 text-brand" />
                     </span>
                     <div>
                       <h3 className="text-base font-semibold text-bone">{d.title}</h3>
@@ -90,7 +90,7 @@ export function About() {
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08} className="bg-ink-soft">
               <div className="flex h-full flex-col items-center justify-center px-4 py-8 text-center sm:py-10">
-                <div className="font-display text-4xl font-semibold text-gradient-brass sm:text-5xl">
+                <div className="font-display text-4xl font-semibold text-gradient-brand sm:text-5xl">
                   {s.value}
                 </div>
                 <div className="mt-2 text-xs leading-tight text-muted sm:text-sm">

@@ -18,8 +18,8 @@ export function PageHero({
       <div className="bg-grid mask-fade-radial absolute inset-0 opacity-40" aria-hidden />
       <Container className="relative">
         <Reveal>
-          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.25em] text-brass">
-            <span className="h-px w-6 bg-brass/60" />
+          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.25em] text-brand">
+            <span className="h-px w-6 bg-brand/60" />
             {eyebrow}
           </span>
         </Reveal>

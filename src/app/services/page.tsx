@@ -9,7 +9,7 @@ import { services } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Interior fit-outs, waterproofing, painting, polishing, flooring, glass films and blinds — hospitality-grade finishing under one roof.",
+    "Interior fit-outs, waterproofing, painting, polishing, flooring, glass films and blinds. Hospitality-grade finishing under one roof.",
 };
 
 export default function ServicesPage() {
@@ -20,10 +20,10 @@ export default function ServicesPage() {
         title={
           <>
             Every finish your project needs,{" "}
-            <span className="text-gradient-brass">under one roof</span>
+            <span className="text-gradient-brand">under one roof</span>
           </>
         }
-        intro="Seven specialist trades, one accountable team. Explore what we deliver — from structural waterproofing to the final coat, film and blind."
+        intro="Seven specialist trades, one accountable team. Explore what we deliver, from structural waterproofing to the final coat, film and blind."
       />
 
       <section className="pb-8">

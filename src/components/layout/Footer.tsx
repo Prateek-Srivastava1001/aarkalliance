@@ -30,7 +30,7 @@ export function Footer() {
                 <li key={s.id}>
                   <Link
                     href={`/services#${s.id}`}
-                    className="text-muted transition-colors hover:text-brass"
+                    className="text-muted transition-colors hover:text-brand"
                   >
                     {s.title}
                   </Link>
@@ -46,22 +46,22 @@ export function Footer() {
             </h3>
             <ul className="mt-5 space-y-3 text-sm">
               <li>
-                <Link href="/projects" className="text-muted transition-colors hover:text-brass">
+                <Link href="/projects" className="text-muted transition-colors hover:text-brand">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="/#about" className="text-muted transition-colors hover:text-brass">
+                <Link href="/#about" className="text-muted transition-colors hover:text-brand">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/#process" className="text-muted transition-colors hover:text-brass">
+                <Link href="/#process" className="text-muted transition-colors hover:text-brand">
                   Process
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted transition-colors hover:text-brass">
+                <Link href="/contact" className="text-muted transition-colors hover:text-brand">
                   Contact
                 </Link>
               </li>
@@ -77,29 +77,32 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${site.contact.email}`}
-                  className="flex items-center gap-3 text-muted transition-colors hover:text-brass"
+                  className="flex items-center gap-3 text-muted transition-colors hover:text-brand"
                 >
-                  <Mail className="h-4 w-4 text-brass" />
+                  <Mail className="h-4 w-4 text-brand" />
                   {site.contact.email}
                 </a>
               </li>
               <li>
                 <a
                   href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
-                  className="flex items-center gap-3 text-muted transition-colors hover:text-brass"
+                  className="flex items-center gap-3 text-muted transition-colors hover:text-brand"
                 >
-                  <Phone className="h-4 w-4 text-brass" />
+                  <Phone className="h-4 w-4 text-brand" />
                   {site.contact.phone}
                 </a>
               </li>
               <li className="flex items-start gap-3 text-muted">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brass" />
-                {site.contact.serviceAreas}
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+                <span>{site.contact.address}</span>
+              </li>
+              <li className="pl-7 text-xs leading-relaxed text-faint">
+                Serving: {site.contact.serviceAreas}
               </li>
             </ul>
             <Link
               href="/contact"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-bone transition-colors hover:text-brass"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-bone transition-colors hover:text-brand"
             >
               Start a project
               <ArrowUpRight className="h-4 w-4" />
@@ -109,7 +112,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-line pt-8 text-xs text-faint sm:flex-row">
           <p>© {year} {site.name}. All rights reserved.</p>
-          <p>Interiors · Waterproofing · Finishing · Flooring</p>
+          <p>GSTIN {site.contact.gstin} · PAN {site.contact.pan}</p>
         </div>
       </Container>
     </footer>

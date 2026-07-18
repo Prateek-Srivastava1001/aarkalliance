@@ -23,7 +23,7 @@ export function ProjectCard({ project }: { project: Project }) {
       )}
 
       <div className="absolute inset-x-0 bottom-0 p-6">
-        <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.15em] text-brass">
+        <span className="flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.15em] text-brand">
           <MapPin className="h-3.5 w-3.5" />
           {project.location}
         </span>

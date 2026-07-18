@@ -16,7 +16,7 @@ export function CTA() {
             <div className="relative mx-auto max-w-2xl">
               <h2 className="text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
                 Planning a build, renovation or{" "}
-                <span className="text-gradient-brass">rebrand?</span>
+                <span className="text-gradient-brand">rebrand?</span>
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
                 Tell us the scope and timeline. We&apos;ll come back with a clear,
@@ -25,14 +25,14 @@ export function CTA() {
               <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
                   href="/contact"
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brass px-8 py-4 text-sm font-medium text-ink transition-all duration-300 hover:bg-brass-light hover:shadow-[0_18px_44px_-14px_rgba(200,161,90,0.7)] sm:w-auto"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-brand-dark hover:shadow-[0_18px_44px_-14px_rgba(124,58,237,0.7)] sm:w-auto"
                 >
                   Request a quote
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
                 <a
                   href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-surface/60 px-8 py-4 text-sm font-medium text-bone backdrop-blur-sm transition-colors hover:border-brass/50 hover:text-brass sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-line bg-surface/60 px-8 py-4 text-sm font-medium text-bone backdrop-blur-sm transition-colors hover:border-brand/50 hover:text-brand sm:w-auto"
                 >
                   <Phone className="h-4 w-4" />
                   {site.contact.phone}

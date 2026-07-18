@@ -2,7 +2,7 @@
 
 /* ------------------------------------------------------------------ */
 /*  Aark Alliance — design system                                      */
-/*  Premium, dependable, and futuristic. Deep neutrals + brass accent. */
+/*  Premium, dependable, and futuristic. Deep neutrals + brand accent. */
 /* ------------------------------------------------------------------ */
 
 @theme {
@@ -17,10 +17,12 @@
   --color-muted: #a5a49d;
   --color-faint: #6f6e69;
 
-  /* Brass / champagne accent */
-  --color-brass: #c8a15a;
-  --color-brass-light: #e7cd93;
-  --color-brass-dark: #9c7838;
+  /* Brand accent — violet → teal (from the Aark Alliance logo) */
+  --color-brand: #7c3aed;
+  --color-brand-light: #a78bfa;
+  --color-brand-dark: #5b21b6;
+  --color-teal: #22b8c8;
+  --color-teal-light: #67e8f9;
 
   /* Fonts (wired up in layout.tsx via next/font) */
   --font-display: var(--font-space-grotesk), system-ui, sans-serif;
@@ -65,7 +67,7 @@
   }
 
   ::selection {
-    background: var(--color-brass);
+    background: var(--color-brand);
     color: var(--color-ink);
   }
 
@@ -77,7 +79,7 @@
     border-radius: 999px;
     border: 2px solid var(--color-ink);
   }
-  ::-webkit-scrollbar-thumb:hover { background: var(--color-brass-dark); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-brand-dark); }
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
@@ -88,8 +90,8 @@
 
 @layer utilities {
   /* Brass gradient text */
-  .text-gradient-brass {
-    background: linear-gradient(120deg, var(--color-brass-light), var(--color-brass) 45%, var(--color-brass-dark));
+  .text-gradient-brand {
+    background: linear-gradient(120deg, var(--color-brand-light), var(--color-brand) 42%, var(--color-teal));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -128,8 +130,8 @@
   }
 
   /* Brass glow ring on hover */
-  .ring-brass {
-    box-shadow: 0 0 0 1px var(--color-brass-dark), 0 20px 60px -20px rgba(200, 161, 90, 0.35);
+  .ring-brand {
+    box-shadow: 0 0 0 1px var(--color-brand-dark), 0 20px 60px -20px rgba(124, 58, 237, 0.35);
   }
 }
 

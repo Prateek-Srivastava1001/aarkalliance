@@ -27,7 +27,10 @@ export interface Site {
     email: string;
     phone: string;
     whatsapp: string;
+    address: string;
     serviceAreas: string;
+    gstin: string;
+    pan: string;
   };
   social: {
     instagram: string;

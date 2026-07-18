@@ -63,7 +63,7 @@ export function Navbar() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-brass px-5 py-2.5 text-sm font-medium text-ink transition-all duration-300 hover:bg-brass-light hover:shadow-[0_12px_32px_-10px_rgba(200,161,90,0.7)]"
+            className="group inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-brand-dark hover:shadow-[0_12px_32px_-10px_rgba(124,58,237,0.7)]"
           >
             Get a quote
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -96,14 +96,14 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-lg px-4 py-3 text-lg text-bone/90 transition-colors hover:bg-surface hover:text-brass"
+                  className="rounded-lg px-4 py-3 text-lg text-bone/90 transition-colors hover:bg-surface hover:text-brand"
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
                 href="/contact"
-                className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-brass px-5 py-3.5 text-sm font-medium text-ink"
+                className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-3.5 text-sm font-medium text-white"
               >
                 Get a quote
                 <ArrowUpRight className="h-4 w-4" />
