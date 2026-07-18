@@ -2,13 +2,21 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    // Placeholder photos are self-hosted in /public/images so the site never
-    // depends on an external URL. To use your own photos, just replace the files
-    // in /public/images (keep the same filename) — no code changes needed.
-    // If you ever want to reference a remote image, add its host below.
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-    ],
+    // Images in /public/images are already compressed WebP, sized for the site.
+    // Serve them as-is (no on-demand optimization) so they're fast and cache
+    // forever on the CDN. To use your own photos, replace the files in
+    // /public/images keeping the same names.
+    unoptimized: true,
+  },
+  async headers() {
+    return [
+      {
+        source: "/images/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+    ];
   },
 };
 

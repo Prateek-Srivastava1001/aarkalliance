@@ -23,7 +23,7 @@ export function Hero() {
       {/* Background image + overlays */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero.jpg"
+          src="/images/hero.webp"
           alt="Premium hotel interior finished by Aark Alliance"
           fill
           priority

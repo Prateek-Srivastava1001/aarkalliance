@@ -38,7 +38,7 @@ export function About() {
             <div className="relative">
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-line sm:aspect-[5/4] lg:aspect-[4/5]">
                 <Image
-                  src="/images/about.jpg"
+                  src="/images/about.webp"
                   alt="Aark Alliance team at work on a hospitality project"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
