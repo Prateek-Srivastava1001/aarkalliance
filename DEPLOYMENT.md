@@ -1,79 +1,79 @@
 # Deployment & Domain Setup
 
-This site is a **Next.js** app hosted on **Vercel**, with source on GitHub:
-`https://github.com/Prateek-Srivastava1001/aarkalliance`
+- **Live (Vercel URL):** https://aarkalliance.vercel.app
+- **Target domain:** https://aarkalliance.com (bought on GoDaddy)
+- **Source:** https://github.com/Prateek-Srivastava1001/aarkalliance
+- **Vercel project:** `aarkalliance` (team: prateek-srivastava1001's projects)
 
 ---
 
-## How deployments work
+## ✅ Connect aarkalliance.com — Nameserver method (chosen)
 
-Once the Vercel project is linked to the GitHub repo:
+Because this domain is used **only** for this website, we let Vercel manage all its
+DNS. You just change the nameservers at GoDaddy once.
 
-- **Push to `main`** → Vercel automatically builds and deploys to **production**.
-- **Open a pull request / push another branch** → Vercel creates a **preview URL**
-  so you can review changes before they go live.
+### In GoDaddy
 
-So to update the live site later, you (or anyone) just edit the JSON in
-`src/content/`, commit, and push. Nothing else to do.
+1. Log in to GoDaddy → **My Products**.
+2. Find **aarkalliance.com** → **Domain** → open its settings.
+3. Go to **Nameservers** → **Change Nameservers** → choose **"I'll use my own nameservers"** (Enter my own nameservers).
+4. Replace the existing GoDaddy nameservers with **exactly these two**:
 
----
+   ```
+   ns1.vercel-dns.com
+   ns2.vercel-dns.com
+   ```
 
-## Pointing **aarkalliance.com** (GoDaddy) at Vercel
+5. Save. (GoDaddy may ask you to confirm you understand you're leaving GoDaddy DNS — that's fine.)
 
-You bought the domain on GoDaddy, so we keep it there and just repoint DNS.
+### What happens next (automatic)
 
-### Step 1 — Add the domain in Vercel
+- Both domains are already added to the Vercel project (`aarkalliance.com` and `www.aarkalliance.com`).
+- Once the nameservers propagate (usually 15 min – a few hours, up to 48h max), Vercel:
+  - **verifies** the domain automatically (you'll get an email),
+  - issues a free **SSL certificate** (https),
+  - serves the site at **aarkalliance.com** and redirects **www → aarkalliance.com**.
+- Check status any time: Vercel → project **aarkalliance** → **Settings → Domains**
+  (or run `vercel domains inspect aarkalliance.com`).
 
-1. Go to the Vercel project → **Settings → Domains**.
-2. Add **`aarkalliance.com`** and **`www.aarkalliance.com`**.
-3. Vercel will then show you the **exact DNS records** to create. Use those exact
-   values — the ones below are Vercel's usual defaults, but always trust what the
-   dashboard shows for your domain.
-
-### Step 2 — Choose ONE of these two methods in GoDaddy
-
-#### ✅ Method A — Edit DNS records (recommended: keeps your GoDaddy email/other records)
-
-In GoDaddy: **My Products → Domain → DNS / Manage DNS**, then set:
-
-| Type  | Name (Host) | Value                     | TTL     |
-|-------|-------------|---------------------------|---------|
-| `A`   | `@`         | `76.76.21.21`             | 1 Hour  |
-| `CNAME` | `www`     | `cname.vercel-dns.com`    | 1 Hour  |
-
-- Edit the **existing** `A` record for `@` (GoDaddy usually has a parked one) to the
-  value Vercel shows, instead of adding a duplicate.
-- If GoDaddy has a `CNAME` for `www` pointing elsewhere, change it to Vercel's value.
-- Remove GoDaddy's default "parked page" / forwarding if present.
-
-#### Method B — Point nameservers to Vercel (Vercel manages all DNS)
-
-In GoDaddy: **Domain → Nameservers → Change → Enter my own nameservers**, and set:
-
-```
-ns1.vercel-dns.com
-ns2.vercel-dns.com
-```
-
-This hands full DNS control to Vercel. Simpler for the website, but if you use
-GoDaddy email or other DNS records on this domain, prefer **Method A**.
-
-### Step 3 — Wait & verify
-
-- DNS changes take anywhere from a few minutes to a couple of hours to propagate.
-- Vercel automatically issues a free **SSL certificate** (https) once DNS resolves.
-- In Vercel → Domains, the domain shows **Valid Configuration** when ready.
-- Vercel will also auto-redirect `www` → `aarkalliance.com` (or vice-versa) — you can
-  pick the primary one in the Domains screen.
+> Current GoDaddy nameservers were `ns27.domaincontrol.com` / `ns28.domaincontrol.com`.
+> After the change they should read the two `*.vercel-dns.com` values above.
 
 ---
 
-## Handy Vercel CLI commands
+## Alternative — A record / CNAME (only if you keep DNS at GoDaddy)
+
+Not needed for the nameserver method above. Kept here for reference:
+
+| Type    | Name | Value                  |
+|---------|------|------------------------|
+| `A`     | `@`  | `76.76.21.21`          |
+| `CNAME` | `www`| `cname.vercel-dns.com` |
+
+Always use the exact values shown in Vercel → Settings → Domains for your domain.
+
+---
+
+## 🔄 Auto-deploy on every push (one-time GitHub connect)
+
+Right now the site deploys via the Vercel CLI. To make **every push to `main`
+auto-deploy** (and get preview URLs for branches):
+
+1. Vercel → project **aarkalliance** → **Settings → Git**.
+2. Click **Connect Git Repository** → **GitHub** → install/authorize the **Vercel GitHub app**
+   and grant it access to the **`aarkalliance`** repo.
+3. Select `Prateek-Srivastava1001/aarkalliance`. Done — pushes now deploy automatically.
+
+Until then, deploy manually from this folder with:
 
 ```bash
-vercel                      # deploy a preview
-vercel --prod               # deploy to production
-vercel domains inspect aarkalliance.com   # show the exact DNS records needed
-vercel domains add aarkalliance.com       # attach the domain to the project
-vercel git connect          # link the GitHub repo for auto-deploys
+vercel --prod        # deploy current code to production
 ```
+
+---
+
+## Updating the site later
+
+1. Edit the JSON in `src/content/` (see `README.md`) and/or images in `public/images/`.
+2. `git add -A && git commit -m "update content" && git push`
+3. If GitHub is connected → it deploys automatically. Otherwise run `vercel --prod`.
