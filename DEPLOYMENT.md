@@ -89,11 +89,14 @@ Because the domain uses **Vercel nameservers**, the mailbox's DNS records live i
 |------|------|-------|----------|
 | MX   | `@`  | `smtp.secureserver.net`       | 0  |
 | MX   | `@`  | `mailstore1.secureserver.net` | 10 |
-| TXT  | `@`  | `v=spf1 include:secureserver.net -all` | — |
-| CNAME (DKIM) | *(from GoDaddy)* | *(from GoDaddy)* | — |
+| TXT (SPF) | `@` | `v=spf1 include:secureserver.net -all` | — |
+| CNAME | `email` | `email.secureserver.net` | — |
+| CNAME (DKIM) | `secureserver1._domainkey` | `s1.dkim.aarkalliance_com.1a2.onsecureserver.net` | — |
+| CNAME (DKIM) | `secureserver2._domainkey` | `s2.dkim.aarkalliance_com.1a2.onsecureserver.net` | — |
+| SRV | `_autodiscover._tcp` | `100 1 443 autodiscover.secureserver.net` | — |
 
 Manage them with `vercel dns ls aarkalliance.com` / `vercel dns add ...`.
-DKIM CNAMEs are domain-specific — copy them from GoDaddy's email DKIM setup screen.
+(DKIM CNAME values are domain-specific — these came from GoDaddy's email setup screen.)
 
 > ⚠️ If the nameservers are ever changed again, these mail records must be
 > re-created or email will stop working.
