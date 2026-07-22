@@ -77,3 +77,23 @@ vercel --prod        # deploy current code to production
 1. Edit the JSON in `src/content/` (see `README.md`) and/or images in `public/images/`.
 2. `git add -A && git commit -m "update content" && git push`
 3. If GitHub is connected → it deploys automatically. Otherwise run `vercel --prod`.
+
+---
+
+## 📧 Email DNS (GoDaddy Professional Email)
+
+Because the domain uses **Vercel nameservers**, the mailbox's DNS records live in
+**Vercel** (not GoDaddy). These are set for GoDaddy Professional Email (secureserver):
+
+| Type | Name | Value | Priority |
+|------|------|-------|----------|
+| MX   | `@`  | `smtp.secureserver.net`       | 0  |
+| MX   | `@`  | `mailstore1.secureserver.net` | 10 |
+| TXT  | `@`  | `v=spf1 include:secureserver.net -all` | — |
+| CNAME (DKIM) | *(from GoDaddy)* | *(from GoDaddy)* | — |
+
+Manage them with `vercel dns ls aarkalliance.com` / `vercel dns add ...`.
+DKIM CNAMEs are domain-specific — copy them from GoDaddy's email DKIM setup screen.
+
+> ⚠️ If the nameservers are ever changed again, these mail records must be
+> re-created or email will stop working.
